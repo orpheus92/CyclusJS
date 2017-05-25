@@ -48,4 +48,4 @@ for i in range(100):
 
     #cyclus ('new.json')
     #mysim = cl.Timer.run_sim(self,'new.json')
-    subprocess.call(['cyclus','new'+str(i)+'.json', '-o', 'out.h5'])
+    subprocess.call(['cyclus','new'+str(i)+'.json', '-o', 'out'+str(i)+'.h5'])
