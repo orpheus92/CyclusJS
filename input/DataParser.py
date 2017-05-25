@@ -56,9 +56,9 @@ class HDF5Reader:
 
 output = [['refuel_time', 'cycle_time', 'power_cap', 'duration', 'build_times', 'lifetimes', 'Totalpower']]
 for i in range(0,100):   
-    with open('/Users/zhiminli/CyclusJS/input/new'+str(i)+'.json', 'r') as f:
+    with open('new'+str(i)+'.json', 'r') as f:
         data = json.load(f)
-    db = Hdf5Back('/Users/zhiminli/CyclusJS/input/out'+str(i)+'.h5')
+    db = Hdf5Back('out'+str(i)+'.h5')
 
     jsonreader = JSONReader(data)
     hdfread = HDF5Reader(db)
