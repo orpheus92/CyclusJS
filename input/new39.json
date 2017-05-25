@@ -1,0 +1,213 @@
+{
+    "simulation": {
+        "archetypes": {
+            "spec": [
+                {
+                    "lib": "cycamore",
+                    "name": "Reactor"
+                },
+                {
+                    "lib": "cycamore",
+                    "name": "Sink"
+                },
+                {
+                    "lib": "cycamore",
+                    "name": "Source"
+                },
+                {
+                    "alias": "agents_sink",
+                    "lib": "agents",
+                    "name": "Sink"
+                },
+                {
+                    "alias": "agents_source",
+                    "lib": "agents",
+                    "name": "Source"
+                },
+                {
+                    "lib": "cycamore",
+                    "name": "DeployInst"
+                },
+                {
+                    "lib": "agents",
+                    "name": "NullRegion"
+                }
+            ]
+        },
+        "control": {
+            "dt": 2629846,
+            "duration": 48,
+            "startmonth": 7,
+            "startyear": 2022
+        },
+        "facility": [
+            {
+                "config": {
+                    "Source": {
+                        "inventory_size": 3.0393765649297055e+298,
+                        "outcommod": "natural_uranium_fuel",
+                        "throughput": 5.687738394830444e+297
+                    }
+                },
+                "name": "Source"
+            },
+            {
+                "config": {
+                    "Sink": {
+                        "capacity": 9.73607447971907e+298,
+                        "in_commods": {
+                            "val": [
+                                "used_fuel"
+                            ]
+                        },
+                        "max_inv_size": 6.78867444262745e+298
+                    }
+                },
+                "name": "Sink"
+            },
+            {
+                "config": {
+                    "Reactor": {
+                        "assem_size": 14284.505461890136,
+                        "cycle_step": 0,
+                        "cycle_time": 18,
+                        "fuel_incommods": {
+                            "val": [
+                                "natural_uranium_fuel"
+                            ]
+                        },
+                        "fuel_inrecipes": {
+                            "val": [
+                                "natural_uranium_fuel"
+                            ]
+                        },
+                        "fuel_outcommods": {
+                            "val": [
+                                "used_fuel"
+                            ]
+                        },
+                        "fuel_outrecipes": {
+                            "val": [
+                                "used_fuel"
+                            ]
+                        },
+                        "n_assem_batch": 1,
+                        "n_assem_core": 2,
+                        "n_assem_fresh": 2,
+                        "n_assem_spent": 452793041,
+                        "power_cap": 1047.8142518743432,
+                        "refuel_time": 1
+                    }
+                },
+                "name": "Reactor"
+            }
+        ],
+        "recipe": [
+            {
+                "basis": "mass",
+                "name": "natural_uranium_fuel",
+                "nuclide": [
+                    {
+                        "comp": 0.00711,
+                        "id": "U235"
+                    },
+                    {
+                        "comp": 0.99289,
+                        "id": "U238"
+                    }
+                ]
+            },
+            {
+                "basis": "mass",
+                "name": "used_fuel",
+                "nuclide": [
+                    {
+                        "comp": 0.0069149684647386404,
+                        "id": "U235"
+                    },
+                    {
+                        "comp": 0.9814454315565821,
+                        "id": "U238"
+                    },
+                    {
+                        "comp": 0.0002587124836993509,
+                        "id": "Pu238"
+                    },
+                    {
+                        "comp": 0.005705687255490264,
+                        "id": "Pu239"
+                    },
+                    {
+                        "comp": 0.0028456872554902635,
+                        "id": "Pu240"
+                    },
+                    {
+                        "comp": 0.0016778436277451317,
+                        "id": "Pu241"
+                    },
+                    {
+                        "comp": 0.0008238562418496755,
+                        "id": "Pu242"
+                    },
+                    {
+                        "comp": 5.568562418496755e-05,
+                        "id": "Am241"
+                    },
+                    {
+                        "comp": 0.00017785624184967543,
+                        "id": "Am243"
+                    },
+                    {
+                        "comp": 2.3485624184967547e-05,
+                        "id": "Cm242"
+                    },
+                    {
+                        "comp": 7.078562418496754e-05,
+                        "id": "Cm244"
+                    }
+                ]
+            }
+        ],
+        "region": {
+            "config": {
+                "NullRegion": null
+            },
+            "institution": {
+                "config": {
+                    "DeployInst": {
+                        "build_times": {
+                            "val": [
+                                "1",
+                                "1",
+                                4
+                            ]
+                        },
+                        "lifetimes": {
+                            "val": [
+                                "-1",
+                                "-1",
+                                13
+                            ]
+                        },
+                        "n_build": {
+                            "val": [
+                                "1",
+                                "1",
+                                "1"
+                            ]
+                        },
+                        "prototypes": {
+                            "val": [
+                                "Source",
+                                "Sink",
+                                "Reactor"
+                            ]
+                        }
+                    }
+                },
+                "name": "SingleInstitution"
+            },
+            "name": "SingleRegion"
+        }
+    }
+}
