@@ -1,7 +1,7 @@
 {
     "simulation": {
         "control": {
-            "duration": 198,
+            "duration": "$st",
             "startmonth": 7,
             "startyear": 2022,
             "dt": 2629846
@@ -145,7 +145,7 @@
                                 "natural_uranium_fuel"
                             ]
                         },
-                        "cycle_time": 19,
+                        "cycle_time": "$rc",
                         "assem_size": 14284.505461890136,
                         "fuel_outcommods": {
                             "val": [
@@ -159,9 +159,9 @@
                                 "natural_uranium_fuel"
                             ]
                         },
-                        "refuel_time": 3,
+                        "refuel_time": "$rf",
                         "n_assem_core": 2,
-                        "power_cap": 811.1701096298586,
+                        "power_cap": "$rp",
                         "n_assem_fresh": 2
                     }
                 },
@@ -177,8 +177,8 @@
                 "name": "SingleInstitution",
                 "config": {
      "DeployInst": {
-      "build_times": {"val": ["1", "1", "1"]}, 
-      "lifetimes": {"val": ["-1", "-1", "-1"]}, 
+      "build_times": {"val": ["1", "1", "$rb"]}, 
+      "lifetimes": {"val": ["-1", "-1", "$rl"]}, 
       "n_build": {"val": ["1", "1", "1"]}, 
       "prototypes": {"val": ["Source", "Sink", "Reactor"]}
      }
