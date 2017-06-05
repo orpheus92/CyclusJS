@@ -17,14 +17,14 @@ sammpleDict = {"rint": random.randint,
 with open('spec.json', 'r') as f:
     spec = json.load(f)
 
-    numparam = len(spec["config"])
+    numparam = len(spec["variable"])
 
 for i in range(100):
     file = open(spec["input"]["name"], 'r')
     contents = file.read()
     for j in range(numparam):
-        cfunc = sammpleDict[spec["config"][str(j)]["samplef"]]
-        contents = contents.replace(spec["config"][str(j)]["key"], str(cfunc(*spec["config"][str(j)]["range"])))
+        cfunc = sammpleDict[spec["variable"][str(j)]["samplef"]]
+        contents = contents.replace(spec["variable"][str(j)]["val"], str(cfunc(*spec["variable"][str(j)]["range"])))
 
     tfile = open('new' + str(i) + '.json', 'w')
     tfile.write(contents)

@@ -1,42 +1,42 @@
 {
-    "config": {
+    "variable": {
         "0":{
-            "key": "$rc",
+            "val": "$rc",
             "type": "int",
             "samplef": "rint",
             "num": 100,
             "range": [14,20]
         },
 	"1": {
-            "key": "$rf",
+            "val": "$rf",
             "type": "int",
             "samplef": "rint",
             "num": 100,
             "range": [1,3]
         },
 	"2": {
-            "key": "$rb",
+            "val": "$rb",
             "type": "int",
             "samplef": "rint",
             "num": 100,
             "range": [1,100]
         },
 	"3": {
-            "key": "$rl",
+            "val": "$rl",
             "type": "int",
             "samplef": "rint",
             "num": 100,
             "range": [12,600]
         },
 	"4": {
-            "key": "$rp",
+            "val": "$rp",
             "type": "float",
             "samplef": "rdouble",
             "num": 100,
             "range": [200,1200]
         },
 	"5": {
-            "key": "$st",
+            "val": "$st",
             "type": "int",
             "samplef": "rrange",
             "num": 100,
